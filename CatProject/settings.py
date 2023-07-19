@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'CatApp',
     'rest_framework',
 ]
-
+# add the apps which ar necessary for running the api
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

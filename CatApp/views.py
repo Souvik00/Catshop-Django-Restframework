@@ -4,6 +4,7 @@ from .models import CatShop
 from .serializers import CatShopSerializer
 from rest_framework import status
 
+
 class CatShopList(APIView):
     def get(self, request):
         CatShops = CatShop.objects.all()
@@ -19,11 +20,11 @@ class CatShopList(APIView):
 class CatShopDetail(APIView):
     def get(self, request, pk):
         catshop = CatShop.objects.get(pk = pk)
-        serializer = CatShopSerializer(breed)
+        serializer = CatShopSerializer(catshop)
         return Response(serializer.data)
     def put(self, request, pk):
         catshop = CatShop.objects.get(pk=pk)
-        serializer = CatShopSerializer(breed, data = request.data)
+        serializer = CatShopSerializer(catshop, data = request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)

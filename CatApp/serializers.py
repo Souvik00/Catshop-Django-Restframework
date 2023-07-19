@@ -12,3 +12,4 @@ class CatShopSerializer(serializers.ModelSerializer):
         'description',
         )
 
+#seriallized the attribute of the model for the view

@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/cat/', CatShopList.as_view()),
     path('api/cat/<int:pk>/', CatShopDetail.as_view()) ,
-
+    #http://127.0.0.1:8000/api/cat/id/ retrieving a single cat by id
+    #http://127.0.0.1:8000/api/cat/ retrieving all cats
 ]

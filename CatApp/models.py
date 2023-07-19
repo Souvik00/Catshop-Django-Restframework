@@ -7,6 +7,8 @@ class CatShop(models.Model):
     price = models.IntegerField()
     breed = models.CharField(max_length=50)
     description = models.TextField(max_length=50)
+    #attribute of the model cats
 
     def __str__(self):
         return self.name
+    #return the name of the model
