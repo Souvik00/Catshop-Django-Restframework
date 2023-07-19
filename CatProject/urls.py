@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from CatApp.views import BreedList, BreedDetail, DogDetail, DogList
+from CatApp.views import CatShopList,CatShopDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/cat/', BreedList.as_view()),
-    path('api/cat/<int:pk>/', BreedDetail.as_view()) ,
+    path('api/cat/', CatShopList.as_view()),
+    path('api/cat/<int:pk>/', CatShopDetail.as_view()) ,
 
 ]
