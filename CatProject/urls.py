@@ -1,5 +1,5 @@
 """
-URL configuration for CatProject project.
+URL configuration for dog_api_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from CatApp.views import BreedList, BreedDetail, DogDetail, DogList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/cat/', BreedList.as_view()),
+    path('api/cat/<int:pk>/', BreedDetail.as_view()) ,
+
 ]
